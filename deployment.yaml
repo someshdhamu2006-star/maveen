@@ -15,5 +15,18 @@ spec:
     spec:
       containers:
         - name: java-weather-app
-          image: somesh2404/java-weather-app:1.0
+          image: somesh2404/java-weather-app:1.1
           imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-weather-app
+spec:
+  type: NodePort
+  selector:
+    app: java-weather-app
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30009
