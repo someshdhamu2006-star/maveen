@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'somesh2404/java-weather-app:1.0'
+        DOCKER_IMAGE = 'somesh2404/java-weather-app:1.1'
         KUBECONFIG = 'C:\\Users\\LENOVO\\.kube\\config'
         PATH = "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
     }
