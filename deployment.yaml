@@ -1,0 +1,19 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-weather-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java-weather-app
+  template:
+    metadata:
+      labels:
+        app: java-weather-app
+    spec:
+      containers:
+        - name: java-weather-app
+          image: somesh2404/java-weather-app:1.0
+          imagePullPolicy: IfNotPresent
